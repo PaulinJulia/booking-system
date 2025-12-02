@@ -42,7 +42,7 @@ export const deleteCustomer = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const deleted = await prisma.customer.delete({ where: { id: Number(id) } });
-    res.json(deleted);
+    res.status(200).json(deleted);
   } catch (error) {
     res
       .status(500)

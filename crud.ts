@@ -2,7 +2,7 @@ import { prisma } from "./lib/prisma";
 
 async function main() {
   const customer = await prisma.customer.create({
-    data: { name: "Test Kund", email: `test${Date.now()}@example.com` }, // unik email
+    data: { name: "Test Kund", email: `test${Date.now()}@example.com` },
   });
   const hotel = await prisma.hotel.create({
     data: { name: "Testhotell", address: "Testgatan 1" },
